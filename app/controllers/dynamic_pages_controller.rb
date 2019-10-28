@@ -8,4 +8,9 @@ class DynamicPagesController < ApplicationController
   	@gossip = Gossip.find(params[:id])
   end
 
+  def user
+  	@user = User.find(params[:id])
+  	@city = City.find(@user.city_id)
+  end
+
 end

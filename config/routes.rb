@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+	get 'user/:id', to: 'dynamic_pages#user', as: 'user'
+	
 	get 'gossip/:id', to: 'dynamic_pages#gossip', as: 'gossip'
 
   get '/welcome/:id', to: 'dynamic_pages#welcome', as: 'welcome'
